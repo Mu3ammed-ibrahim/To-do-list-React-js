@@ -1,13 +1,92 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --light: #FEFAE0;
+  --blue: #DDA15E;
+  --dark: #191923;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap");
+
+body {
+  font-family: "Playwrite GB S", serif;
+  background-image: url("https://img.freepik.com/free-photo/-lay-notebook--list-desk_23-2148938724.jpg"); /* Replace with your image URL */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the background image */
+  background-attachment: fixed; /* Keeps the background fixed when scrolling */
+  background-repeat: no-repeat;
+}
+.app {
+  width: 50%;
+  display: flex;
+  margin-left: 25%;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+  border-radius: 15px; /* Rounded corners for the glass effect */
+  padding: 2rem; /* Padding for inner spacing */
+}
+.header {
+  display: flex;
+  justify-content: center;
+  color: var(--dark);
+}
+.header span {
+  margin-left: 1rem;
+  font-size: 2rem;
+}
+.TodoList {
+  color: var(--light);
+}
+.TodoList input {
+  margin: 0.5rem;
+}
+.TodoList .btn {
+  border-radius: 5px;
+  border: #fffaff;
+  padding: 0.5rem;
+  background-color: var(--blue);
+  color: var(--light);
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between; /* Ensures space between the text and button */
+  align-items: center; /* Vertically centers the content */
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  border-radius: 5px;
+}
+
+/* Task text */
+.task-item h3 {
+  color: var(--dark);
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* Button styles */
+.task-btn {
+  background:none;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Input field default style */
+input[type="text"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+  font-family: "Playwrite GB S", serif; 
+}
+
+/* Input field focus state */
+input[type="text"]:focus {
+  box-shadow: 0 0 8px rgba(226, 155, 40, 0.938); /* Blue shadow when focused */
+  border-color: #DDA15E; /* Blue border to match the shadow */
 }
